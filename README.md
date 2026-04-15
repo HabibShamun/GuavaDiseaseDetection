@@ -22,7 +22,6 @@ A key aspect of this work is **cross-dataset evaluation**, ensuring models are n
 ├── Models/
 │   ├── Dataset_1_Models/
 │   ├── Dataset_2_Models/
-├── results/
 └── README.md
 ```
 
