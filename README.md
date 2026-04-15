@@ -1,4 +1,4 @@
-# 🍈 Guava Disease Detection using Deep Learning
+# Guava Disease Detection using Deep Learning
 
 ## 📌 Overview
 
@@ -18,7 +18,7 @@ A key aspect of this work is **cross-dataset evaluation**, ensuring models are n
 
 ```
 ├── Dataset_1/        # Primary dataset (fruit images)
-├── Dataset_2/        # Benchmark dataset (leaves + fruits)
+├── Dataset_2/        # Benchmark dataset (filtered: fruits only)
 ├── Models/
 │   ├── Dataset_1_Models/
 │   ├── Dataset_2_Models/
@@ -32,7 +32,7 @@ A key aspect of this work is **cross-dataset evaluation**, ensuring models are n
 
 ### 🔹 Dataset 1 — Guava Fruit Disease Dataset
 
-Source: Mendeley Data
+**Source:** Mendeley Data
 
 **Classes:**
 
@@ -48,21 +48,27 @@ Source: Mendeley Data
 * Location: Bangladesh (Rajshahi & Pabna)
 * Verified by plant pathologists
 
-📎 Link: (https://data.mendeley.com/datasets/bkdkc4n835/1)
+📎 Link: https://data.mendeley.com/datasets/bkdkc4n835/1
 
 ---
 
-### 🔹 Dataset 2 — Guava Leaves & Fruits Dataset
+### 🔹 Dataset 2 — Guava Leaves & Fruits Dataset (Filtered)
 
-Source: Mendeley Data
+**Source:** Mendeley Data
 
-**Classes:**
+⚠️ **Important Modification:**
+For this study, Dataset 2 was **filtered to include only fruit images**. All **leaf-based classes were excluded** to maintain consistency with Dataset 1 and ensure fair comparison.
+
+**Included Classes (Fruits Only):**
 
 * Phytophthora
-* Red Rust
 * Scab
 * Styler and Root
-* Healthy
+
+**Excluded Classes:**
+
+* ❌ Red Rust (leaf-based disease)
+* ❌ Disease-free leaves
 
 **Details:**
 
@@ -71,7 +77,7 @@ Source: Mendeley Data
 * Image Size: 512 × 512
 * Source: Bangladesh Agricultural University
 
-📎 Link: (https://data.mendeley.com/datasets/x84p2g3k6z/1)
+📎 Link: https://data.mendeley.com/datasets/x84p2g3k6z/1
 
 ---
 
@@ -79,7 +85,7 @@ Source: Mendeley Data
 
 ### 🔸 Models Used on **Both Datasets**
 
-The following CNN and pretrained architectures were trained and evaluated on **both Dataset 1 and Dataset 2**:
+The following CNN and pretrained architectures were trained and evaluated on **both Dataset 1 and filtered Dataset 2**:
 
 * Custom CNN
 * AlexNet
@@ -92,14 +98,34 @@ The following CNN and pretrained architectures were trained and evaluated on **b
 
 ### 🔸 Transformer Models
 
-#### Dataset 1:
+#### 📍 Dataset 1:
 
 * Vision Transformer (ViT)
 * DeiT (Data-efficient Image Transformer)
 * Swin Transformer
 
-#### Dataset 2:
+#### 📍 Dataset 2:
 
 * DeiT (only transformer used)
 
 ---
+
+## 📈 Results
+
+* Accuracy
+* Loss curves
+* Confusion matrices
+
+---
+
+## 🚀 Future Work
+
+* Include real-time mobile deployment
+* Expand dataset with more field conditions
+* Explore lightweight models for edge devices
+
+---
+
+## 📜 License
+
+This project is for academic and research purposes.
